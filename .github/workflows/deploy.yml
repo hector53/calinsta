@@ -1,8 +1,8 @@
-name: Deploy to Github Pages
+name: Deploy Nuxt
 on:
     push:
         branches:
-            - develop
+            - main
 
 jobs:
     deploy:
@@ -20,7 +20,7 @@ jobs:
                 npm install
                 npm run build
             - name: Deploy
-              uses: s0/git-publish-subdir-action@develop
+              uses: s0/git-publish-subdir-action@main
               env:
                 REPO: self
                 BRANCH: master
