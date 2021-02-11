@@ -1,12 +1,12 @@
-name: Deploy Nuxt test 10
+name: Deploy Nuxt
 on:
     push:
         branches:
-            - develop
+            - main
 
 jobs:
     deploy:
-        name: Deploy test 10
+        name: Deploy Application
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repo
