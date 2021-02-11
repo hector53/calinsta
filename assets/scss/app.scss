@@ -1,0 +1,123 @@
+@import './variables';
+
+// @TODO: TEST
+// -webkit-font-smoothing: antialiased;
+// -moz-osx-font-smoothing: grayscale;
+
+@import 'ui-huma/scss/app';
+
+// @import 'bv-form-image-group/src/BvFormImageGroup';
+@import './bv-form-image-group';
+
+@import './course-nav';
+@import './player';
+@import './accordion';
+@import './quiz';
+@import './avatar';
+@import './popover-rtl';
+
+// @TODO: add to bv-form-image-group
+.bv-no-focus-ring :focus {
+  outline: none;
+}
+
+// @TODO: add to ui-huma/scss/_navbar.scss
+.top-navbar {
+  top: $navbar-height !important;
+}
+
+// @TODO: add to ui-huma/scss/_layout.scss
+body:not(.sub-layout) .mdk-drawer-layout {
+  overflow: visible; // fix children with position: sticky;
+}
+
+// @TODO: add to ui-huma/scss/_page-nav.scss
+.page-nav {
+  max-height: 100vh;
+  overflow-y: visible;
+}
+
+.sidebar-dark-dodger-blue {
+  .sidebar-submenu .sidebar-menu-text::after {
+    background-color: $accent-red;
+  }
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+// @TODO: move to ui-huma/scss/_layout-boxed.scss
+@include media-breakpoint-up(lg) {
+  .layout-boxed__layout {
+    padding: 1rem 0;
+  }
+}
+
+.sub-layout-content {
+  min-height: initial;
+}
+
+// @TODO: move to ui-huma/scss/_layout.scss
+@include media-breakpoint-only(xs) {
+  .mdk-header-layout .sub-layout-drawer .mdk-drawer__content {
+    top: $navbar-height;
+  }
+}
+
+.b-rating-inline {
+  box-shadow: none;
+  padding: 0;
+  background-color: transparent;
+  
+  .b-rating-star:first-of-type {
+    padding-left: 0;
+  }
+  
+  &.form-control-sm {
+    height: 1rem;
+  }
+
+  &.form-control-lg {
+    height: 1.5rem;
+  }
+}
+
+.b-rating-value {
+  line-height: 1;
+  color: $text-muted;
+}
+
+.text-rating {
+  color: $rating !important;
+}
+
+// @TODO: add to ui-huma
+#settings .form-image-group {
+  flex-wrap: wrap !important;
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+
+  .col {
+    margin-left: 0 !important;
+  }
+  .col:nth-child(even) {
+    margin-left: .5rem !important; 
+  }
+  .col:nth-child(1n+3) {
+    margin-top: .5rem !important; 
+  }
+
+  .col {
+    padding-left: .25rem;
+    padding-right: .25rem;
+    flex: 0 0 50%;
+    max-width: 50%;
+    &:nth-child(even) {
+      margin-left: 0 !important;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
