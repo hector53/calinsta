@@ -1,4 +1,4 @@
-name: Deploy Nuxt
+name: Deploy Nuxt test 10
 on:
     push:
         branches:
