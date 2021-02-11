@@ -25,4 +25,4 @@ jobs:
                 REPO: self
                 BRANCH: master
                 FOLDER: dist
-                GITHUB_TOKEN: ${{ 6ee0479e8598757f3117a557b1b21df155bd1ecd }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
